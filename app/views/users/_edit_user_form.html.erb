@@ -1,0 +1,43 @@
+<%= form_with(model: user) do |form| %>
+
+  <%= render 'show_errors', user: user %>
+
+  <%= hidden_field(:user, :user_name) %>
+
+  <div class="flex-row">
+    <div>
+      <div class="field">
+        <%= form.label :user_name %>
+        <%= form.text_field :user_name, :readonly => true, :disabled => true %>
+      </div>
+      
+      <div class="field">
+        <%= form.label :birthday %>
+        <%= form.date_select :birthday %>
+      </div>
+
+      <div class="field">
+        <%= form.label :about %>
+        <%= form.text_area :about %>
+      </div>
+
+      <div class="field">
+        <%= form.hidden_field :img %>
+      </div>
+    </div> 
+    
+    <div id="user_current_img" class="editable">
+      <i class="fas fa-pencil-alt edit-pencil"></i>
+      <%= render 'user_thumbnail_img', user: user %>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>
+
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<%= javascript_pack_tag 'uploadWidget' %>

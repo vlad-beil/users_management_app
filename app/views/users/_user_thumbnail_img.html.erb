@@ -1,0 +1,11 @@
+<% if user.img.nil? || user.img.empty? %>
+    <%= cl_image_tag("users_management_app/default_user_img.png", :transformation=>[
+    {:border=>"2px_solid_rgb:6757bd", :width=>100, :height=>100, :quality=>"auto", :radius=>"max", :crop=>"thumb"}
+    ]) 
+    %>
+<% else %>
+    <%= cl_image_tag(user.img, :transformation=>[
+    {:border=>"2px_solid_rgb:6757bd", :width=>100, :height=>100, :gravity=>"auto", :quality=>"auto", :radius=>"max", :crop=>"thumb"}
+    ]) 
+    %>
+<% end %>

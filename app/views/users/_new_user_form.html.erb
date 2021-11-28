@@ -1,0 +1,24 @@
+<%= form_with(model: user) do |form| %>
+  
+  <%= render 'show_errors', user: user %>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name %>
+  </div>
+  
+    <div class="field">
+      <%= form.label :birthday %>
+      <%= form.date_select :birthday %>
+    </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_area :about %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

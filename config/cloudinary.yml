@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: vlad-beil-cloudinary
+  api_key: '664779236628566'
+  api_secret: uc_eB2uijd6bIUq7CX1rBmt5aII
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: vlad-beil-cloudinary
+  api_key: '664779236628566'
+  api_secret: uc_eB2uijd6bIUq7CX1rBmt5aII
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: vlad-beil-cloudinary
+  api_key: '664779236628566'
+  api_secret: uc_eB2uijd6bIUq7CX1rBmt5aII
+  enhance_image_tag: true
+  static_file_support: false

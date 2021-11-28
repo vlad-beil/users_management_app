@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<% @users.each do |user| %>
+  <div class="user-tumb-container flex-row">
+    <%= link_to user do %>
+      <div class="flex-row">
+        <div>
+          <%= render 'user_thumbnail_img', user: user %>
+        </div>
+        <div>
+          <%= render 'user_basic_details', user: user %>
+        </div>
+      </div>
+    <% end %>
+    <div>
+      <%= link_to edit_user_path(user) do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'New User', new_user_path %>
