@@ -9,7 +9,7 @@ var myWidget = cloudinary.createUploadWidget({
     }, (error, result) => { if (result.event == "success") {
         console.log(result.info)
         $("#user_img")?.attr("value", result.info.public_id);
-        $("#user_current_img")?.find("img")?.attr("src", result.info.eager[1].secure_url);
+        $("#user_current_img")?.find("img")?.attr("src", result.info.eager[0].secure_url);
     } })
 
 $("#user_current_img")?.on("click", function() {
