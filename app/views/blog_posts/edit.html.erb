@@ -1,0 +1,6 @@
+<h1>Editing User</h1>
+
+<%= render 'post_form.html', blog_post: @blog_post %>
+
+<%= link_to 'Back', user_path(@blog_post.user_id) %> |
+<%= link_to 'Delete', @blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>

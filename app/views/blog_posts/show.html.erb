@@ -1,0 +1,20 @@
+
+<div class="post-container post-flex-col">
+
+    <%= render 'post_banner_img', blog_post: @blog_post %>
+
+    <div>
+        <div class="post-title" style="margin-top: 1rem">
+            Title: <%= @blog_post.title %>
+        </div>
+
+        <div class="post-author" style="margin-top: 1.5rem">
+            <% user = User.find(@blog_post.user_id) %>
+            By: <%= user.user_name %>
+        </div>    
+
+        <div class="post-text" style="margin: 3rem 0 1rem 0">
+            <%= @blog_post.post %>
+        </div>
+    </div>
+</div>

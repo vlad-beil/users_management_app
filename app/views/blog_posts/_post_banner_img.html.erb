@@ -1,0 +1,5 @@
+<% if blog_post.img.nil? || blog_post.img.empty? %>
+    <%= cl_image_tag("users_management_app/no-image-found.png", :quality=>"auto", :width=>"auto", :crop=>"scale", :use_root_path=>true, :client_hints=>true) %>
+<% else %>
+    <%= cl_image_tag(blog_post.img, :quality=>"auto", :width=>"auto", :crop=>"scale", :use_root_path=>true, :client_hints=>true) %>
+<% end %>
